@@ -1,0 +1,170 @@
+/* Resetting default margin and padding */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting width and centering content */
+.container {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    /* tambahkan properti overflow: hidden; untuk mengatasi float */
+}
+
+/* Styling kepala */
+.kepala {
+    height: 150px;
+    background-image: url('../gambar/headergambar.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    overflow-y: hidden;
+    /* Tambahkan properti overflow-y */
+}
+
+/* Styling logo */
+.logo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    margin-top: 20px;
+}
+
+/* Styling menu */
+.menu {
+    height: 40px;
+    background-color: #d54a3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow-y: hidden;
+    /* Tambahkan properti overflow-y */
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* Styling sisi_kiri dan sisi_kanan */
+.sisi_kiri,
+.sisi_kanan {
+    padding: 10px;
+    width: 200px;
+    background-color: #d8bbbb;
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 190px;
+    /* Ubah nilai top agar berada di bawah bagian menu */
+    bottom: 60px;
+    /* Ubah nilai bottom agar berada di atas bagian kaki */
+    z-index: 2;
+    /* Tinggi = tinggi konten - tinggi kepala - tinggi kaki */
+    height: calc(100% - 150px - 155px);
+    /* Misalnya tinggi kepala 150px dan tinggi kaki 100px */
+}
+
+.sisi_kiri {
+    left: 0;
+}
+
+.sisi_kanan {
+    right: 0;
+}
+
+.sisi_kiri ul,
+.sisi_kanan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sisi_kiri li,
+.sisi_kanan li {
+    margin-bottom: 10px;
+}
+
+.sisi_kiri li a,
+.sisi_kanan li a {
+    display: block;
+    padding: 5px 10px;
+    color: #e11c1c;
+    text-decoration: none;
+}
+
+.sisi_kiri li a:hover,
+.sisi_kanan li a:hover {
+    background-color: #ccc;
+}
+
+/* Styling badan */
+.badan {
+    margin-left: 220px;
+    margin-right: 220px;
+    padding: 10px;
+    background-color: #ffffff;
+    position: static;
+    z-index: 2;
+    margin-bottom: 100px;
+    overflow-y: auto;
+    /* Tambahkan properti overflow-y */
+}
+
+/* Styling biodata */
+.biodata {
+    margin-bottom: 20px;
+}
+
+.biodata h3 {
+    margin-bottom: 10px;
+}
+
+/* Styling foto */
+.foto {
+    text-align: center;
+}
+
+/* Inisialisasi konten yang disembunyikan */
+.biodata_foto,
+.pendidikan_formal,
+.pendidikan_non_formal,
+.pengalaman_organisasi,
+.galeri_photo {
+    display: none;
+}
+
+/* Styling kaki */
+.kaki {
+    clear: both;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #b26a62;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow-y: hidden;
+    /* Tambahkan properti overflow-y */
+}
